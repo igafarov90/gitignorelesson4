@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -20,7 +21,9 @@ public class PracticeForm {
             stateSelect = $("#react-select-3-input"),
             citySelect = $("#react-select-4-input"),
             uploadPictureInput = $("#uploadPicture"),
-            SubmitButton = $("#submit");
+            SubmitButton = $("#submit"),
+            ModalContent =  $("[class=\"modal-content\"]"),
+            Table = $("[class=\"table-responsive\"]");
 
     // action
     public PracticeForm setFirstName() {
@@ -105,4 +108,32 @@ public class PracticeForm {
 
         return this;
     }
+    public PracticeForm openingModelContent() {
+        $("[class=\"modal-content\"]").shouldHave(text("Thanks for submitting the form"));
+
+        return this;
+    }
+   public PracticeForm checkTable() {
+        $("tbody").shouldHave(text("ilgiz gafarov"),
+                text("Student Email"),
+                text("igafarov90@mail.ru"),
+                text("Gender"),
+                text("Male"),
+                text("Mobile"),
+                text("9371247471"),
+                text("Date of Birth"),
+                text("17 December,1990"),
+                text("Subjects"),
+                text("Chemistry"),
+                text("Hobbies"),
+                text("Music, Reading"),
+                text("Picture"),
+                text("monkey.png"),
+                text("Address"),
+                text("Russia, 46°23'45.0\"N 48°05'49.1\"E"),
+                text("State and City"),
+                text("NCR Delhi"));
+
+        return this;
+   }
 }
