@@ -39,9 +39,9 @@ bin/
 .vscode/
 
 .DS_Store!/.idea/
-gradlew.bat/
-.idea/
-settings.gradle/
-gradlew/
-gradle/
+gradlew.bat
+.idea
+settings.gradle
+gradlew
+gradle
 
