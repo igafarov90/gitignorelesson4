@@ -39,4 +39,8 @@ bin/
 .vscode/
 
 .idea/*
-
+.gradle/*
+gradle
+gradlew.bat
+settings.gradle
+gradlew
