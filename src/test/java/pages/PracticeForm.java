@@ -26,79 +26,79 @@ public class PracticeForm {
             Table = $("[class=\"table-responsive\"]");
 
     // action
-    public PracticeForm setFirstName() {
-        firstNameInput.setValue("ilgiz");
+    public PracticeForm setFirstName(String firstName) {
+        firstNameInput.setValue(firstName);
 
         return this;
     }
 
-    public PracticeForm setLastName() {
-        lastNameInput.setValue("gafarov");
+    public PracticeForm setLastName(String lastName) {
+        lastNameInput.setValue(lastName);
 
         return this;
     }
 
-    public PracticeForm setUserEmail() {
-        userEmailInput.setValue("igafarov90@mail.ru");
+    public PracticeForm setUserEmail(String userEmail) {
+        userEmailInput.setValue(userEmail);
 
         return this;
     }
 
-    public PracticeForm setUserNumber() {
-        userNumberInput.setValue("9371247471");
+    public PracticeForm setUserNumber(String userNumber) {
+        userNumberInput.setValue(userNumber);
 
         return this;
     }
 
-    public PracticeForm setCurrentAdress() {
-        currentAdress.setValue("Russia, 46°23'45.0\"N 48°05'49.1\"E");
+    public PracticeForm setCurrentAdress(String Adress) {
+        currentAdress.setValue(Adress);
 
         return this;
     }
 
-    public PracticeForm setSubjectsInput() {
-        subjectsInput.sendKeys("Chemistry");
+    public PracticeForm setSubjectsInput(String subjects) {
+        subjectsInput.sendKeys(subjects);
         $("#subjectsInput").pressEnter();
 
         return this;
     }
 
-    public PracticeForm setGenterRadioButton() {
-        $("#genterWrapper").$(byText("Male")).click();
+    public PracticeForm setGenterRadioButton(String genter) {
+        $("#genterWrapper").$(byText(genter)).click();
 
         return this;
     }
 
-    public PracticeForm setDateOfBirthInput() {
+    public PracticeForm setDateOfBirthInput(String year, String month) {
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").selectOptionByValue("1990");
-        $(".react-datepicker__month-select").selectOptionByValue("11");
+        $(".react-datepicker__year-select").selectOptionByValue(year);
+        $(".react-datepicker__month-select").selectOptionByValue(month);
         $(".react-datepicker__day--017").click();
 
         return this;
     }
 
-    public PracticeForm clickCheckBoxHobbies() {
-        $("#hobbiesWrapper").$(byText("Music")).click();
-        $("#hobbiesWrapper").$(byText("Reading")).click();
+    public PracticeForm clickCheckBoxHobbies(String hobby1, String hobby2) {
+        $("#hobbiesWrapper").$(byText(hobby1)).click();
+        $("#hobbiesWrapper").$(byText(hobby2)).click();
 
         return this;
     }
 
-    public PracticeForm setStateSelect() {
-        $("#react-select-3-input").setValue("NCR").pressEnter();
+    public PracticeForm setStateSelect(String state) {
+        $("#react-select-3-input").setValue(state).pressEnter();
 
         return this;
     }
 
-    public PracticeForm setCitySelect() {
-        $("#react-select-4-input").setValue("Delhi").pressEnter();
+    public PracticeForm setCitySelect(String city) {
+        $("#react-select-4-input").setValue(city).pressEnter();
 
         return this;
     }
 
-    public PracticeForm uploadPictureInput() {
-        $("#uploadPicture").uploadFromClasspath("monkey.png");
+    public PracticeForm uploadPictureInput(String picture) {
+        $("#uploadPicture").uploadFromClasspath(picture);
 
         return this;
     }

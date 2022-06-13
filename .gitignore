@@ -1,4 +1,4 @@
-.gradle
+
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -38,5 +38,10 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
-.DS_Store
+.DS_Store!/.idea/
+gradlew.bat
+.idea
+settings.gradle
+gradlew
+gradle
+
