@@ -33,7 +33,6 @@ public class PracticeFormTests {
                     .clickSubmitButton()
                     .openingModelContent()
                     .checkTable();
-//new string
     }
 }
 
